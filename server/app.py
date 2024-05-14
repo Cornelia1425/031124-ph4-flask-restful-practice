@@ -110,7 +110,7 @@ def delete_water_things(id:int):
     if water_thing_to_delete:
         db.session.delete(water_thing_to_delete)
         db.session.commit()
-        return {}, 202
+        return {}, 204
         # return [wt for wt in WaterThing.query.all()], 202
     else:
         return {"error":"Not Found"}, 404
